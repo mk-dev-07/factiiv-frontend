@@ -1,0 +1,2 @@
+export const SESSION_30_MINUTES_IN_MS = 30*60*1000;
+export const SESSION_10_SECONDS_IN_MS = 1*10*1000;

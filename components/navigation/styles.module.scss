@@ -1,0 +1,27 @@
+.navigatorStyle {
+	color: white;
+	background-color: #426dc7;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.listItems {
+	display: flex;
+	list-style: none;
+	li {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 0.875rem;
+		line-height: 2rem;
+		padding: 0 2.125rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.listItems {
+		li {
+			padding: 0 0.5rem;
+		}
+	}
+}

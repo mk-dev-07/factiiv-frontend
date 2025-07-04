@@ -1,0 +1,102 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../assets/Proxima\ Nova\ Font.otf");
+  }
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  /* overflow: hidden; */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.dp-calendar .react-datepicker__year-wrapper {
+  max-width: 226px;
+  display: block;
+  min-width: 226px;
+}
+
+.dp-calendar .react-datepicker__monthPicker {
+  max-width: 226px;
+  display: block;
+  min-width: 226px;
+}
+
+@layer base {
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    -moz-print-color-adjust: exact;
+    /* background-color: red; */
+  }
+
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+@media print {
+  .noprint {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+  /* .toprint.visible {
+    visibility: visible;
+  }
+  p {
+    color: rgb(20 41 53);
+  } */
+}
+
+.animate-fade-in {
+  animation: fade-in .8s cubic-bezier(.23,1,.32,1) both
+}
+
+@keyframes fade-in {
+  0% {
+      transform: translateY(200px) scaleY(1.2) scaleX(.9);
+      transform-origin: 50% 50%;
+      filter: blur(4px);
+      opacity: 0
+  }
+
+  to {
+      transform: translateY(0) scaleY(1) scaleX(1);
+      transform-origin: 50% 50%;
+      filter: blur(0);
+      opacity: 1
+  }
+}
